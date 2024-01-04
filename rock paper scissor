@@ -1,0 +1,28 @@
+import random
+
+user_input = input("Enter your choice(rock, paper, scissors)")
+
+possible_choices = ["rock" , "paper" , "scissors"]
+
+computer_input = random.choice(possible_choices)
+
+print(f"You chose {user_input}, computer chose {computer_input}")
+
+if user_input == computer_input:
+    print(f"Its a Draw as both selected {user_input}")
+elif user_input == "rock":
+    if computer_input == "scissors":
+        print("User wins,Rock will break the scissor")
+    else:
+        print("User lose, Paper will cover rock")
+elif user_input == "paper":
+    if computer_input == "rock":
+        print("User wins,paper will cover rock")
+    else:
+        print("User lose, Scissors will cut the paper")
+elif user_input == "scissors":
+
+    if computer_input == "paper":
+        print("User wins,scissors will cut paper")
+    else:
+        print("User lose, Scissors will cut the paper")
